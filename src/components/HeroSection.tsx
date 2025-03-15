@@ -11,7 +11,7 @@ const HeroSection = () => {
     setIsLoaded(true);
     
     const img = new Image();
-    img.src = "/lovable-uploads/27e1ffd7-5ac0-4a89-97df-5f1652a1484c.png";
+    img.src = "/lovable-uploads/cf260a4a-9a98-43bd-9770-a56edbec72d6.png";
     img.onload = () => setIsImageLoaded(true);
   }, []);
 
@@ -25,14 +25,14 @@ const HeroSection = () => {
       <div 
         className={`absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-1000 ${isImageLoaded ? 'opacity-70' : ''}`}
         style={{ 
-          backgroundImage: 'url("/lovable-uploads/27e1ffd7-5ac0-4a89-97df-5f1652a1484c.png")', 
+          backgroundImage: 'url("/lovable-uploads/cf260a4a-9a98-43bd-9770-a56edbec72d6.png")', 
           backgroundPosition: 'center center' 
         }}
         aria-hidden="true"
       ></div>
 
       {/* Preload the hero image */}
-      <link rel="preload" as="image" href="/lovable-uploads/27e1ffd7-5ac0-4a89-97df-5f1652a1484c.png" />
+      <link rel="preload" as="image" href="/lovable-uploads/cf260a4a-9a98-43bd-9770-a56edbec72d6.png" />
 
       {/* Content */}
       <div className="relative container mx-auto px-4 h-screen flex flex-col justify-center">
@@ -44,12 +44,12 @@ const HeroSection = () => {
           </div>
           
           <h1 className={`transition-all duration-700 delay-500 transform font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            Construction of <br />
-            <span className="text-white">private houses</span>
+            Modern Architectural <br />
+            <span className="text-white">Design & Construction</span>
           </h1>
           
           <p className={`transition-all duration-700 delay-700 transform text-white/80 mb-8 max-w-lg ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            All types of work - from designing and laying the foundation to finishing and commissioning. High standards, reasonable prices, free quoting.
+            Creating innovative spaces that blend functionality with aesthetic excellence. From custom homes to commercial projects, we bring your vision to life.
           </p>
           
           <div className={`transition-all duration-700 delay-900 transform flex flex-wrap items-center gap-6 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
