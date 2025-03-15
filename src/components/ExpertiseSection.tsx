@@ -67,7 +67,7 @@ const ExpertiseSection = () => {
               </div>
               
               <p className="text-arch-gray-800 mb-6">
-                Our company provides a full range of services for the construction of private houses and cottages since 1995.
+                Our company provides a full range of services for the construction of private houses and cottages since 2017.
               </p>
               
               <p className="text-arch-gray-800 mb-6">

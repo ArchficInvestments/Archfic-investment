@@ -43,7 +43,7 @@ const About = () => {
     <main className="pt-20">
       <SEO 
         title="About Us" 
-        description="Learn about ArchFic Investment Ltd, a leading architecture and construction company in Luweero, Uganda with over 15 years of experience building dreams since 2005."
+        description="Learn about ArchFic Investment Ltd, a leading architecture and construction company in Luweero, Uganda with over 6 years of experience building dreams since 2017."
         keywords="architecture company Uganda, construction experts, Luweero construction, building team, quality construction company"
         url="/about"
       />
@@ -63,7 +63,7 @@ const About = () => {
               ABOUT US
             </div>
             <h1 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6">
-              Building Dreams Since 2005
+              Building Dreams Since 2017
             </h1>
             <p className="text-white/80 mb-8 max-w-2xl">
               ArchFic Investment Ltd. is a leading architecture and construction company in Luweero, Uganda, 
@@ -100,7 +100,7 @@ const About = () => {
               </div>
               
               <p className="text-arch-gray-800 mb-6">
-                Founded in 2005, ArchFic Investment Ltd. began as a small architectural design firm in Luweero, Uganda. 
+                Founded in 2017, ArchFic Investment Ltd. began as a small architectural design firm in Luweero, Uganda. 
                 With a passion for innovative design and quality construction, we've grown into a full-service 
                 architecture and construction company serving clients throughout Uganda.
               </p>
