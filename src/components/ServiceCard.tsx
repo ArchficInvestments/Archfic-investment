@@ -14,6 +14,7 @@ interface ServiceCardProps {
 const ServiceCard = ({ title, description, icon, backgroundImage, index }: ServiceCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
 
@@ -43,10 +44,14 @@ const ServiceCard = ({ title, description, icon, backgroundImage, index }: Servi
   }, [index]);
 
   useEffect(() => {
-    if (backgroundImage && imgRef.current) {
+    if (backgroundImage) {
       const img = new Image();
       img.src = backgroundImage;
       img.onload = () => setImageLoaded(true);
+      img.onerror = () => {
+        console.error(`Failed to load image: ${backgroundImage}`);
+        setImageError(true);
+      };
     } else {
       setImageLoaded(true);
     }
@@ -59,10 +64,10 @@ const ServiceCard = ({ title, description, icon, backgroundImage, index }: Servi
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      {backgroundImage && (
+      {backgroundImage && !imageError && (
         <>
           <div
-            className={`absolute inset-0 opacity-20 bg-cover bg-center transition-opacity duration-500 ${
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${
               imageLoaded ? 'opacity-20' : 'opacity-0'
             }`}
             style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -75,6 +80,7 @@ const ServiceCard = ({ title, description, icon, backgroundImage, index }: Servi
             loading="lazy"
             width="800"
             height="600"
+            onError={() => setImageError(true)}
           />
         </>
       )}

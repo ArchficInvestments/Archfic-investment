@@ -88,7 +88,7 @@ const Services = () => {
     {
       title: "Renovations & Remodeling",
       description: "Transform your existing space with our renovation and remodeling services, designed to update, improve, and add value to your property.",
-      image: "https://images.unsplash.com/photo-1667468889446-147e7c7e5cb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1392&q=80",
+      image: "https://images.unsplash.com/photo-1574359411659-11a7e1634f77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1392&q=80",
       features: [
         "Kitchen and bathroom remodeling",
         "Home additions and extensions",
