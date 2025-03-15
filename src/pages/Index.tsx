@@ -5,6 +5,7 @@ import ServiceCard from '@/components/ServiceCard';
 import ExpertiseSection from '@/components/ExpertiseSection';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 
 const Index = () => {
   useEffect(() => {
@@ -15,17 +16,17 @@ const Index = () => {
     {
       title: "Traditional house",
       description: "Construction of houses with a long-term guarantee.",
-      backgroundImage: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80"
+      backgroundImage: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Modern house",
       description: "Construction of houses with a long-term guarantee.",
-      backgroundImage: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+      backgroundImage: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Mobile home",
       description: "Construction of houses with a long-term guarantee.",
-      backgroundImage: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80"
+      backgroundImage: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -40,6 +41,13 @@ const Index = () => {
 
   return (
     <main>
+      <SEO 
+        title="Home" 
+        description="ArchFic Investment Ltd is a leading architecture and construction company in Luweero, Uganda offering residential and commercial construction, renovations, and architectural design services."
+        keywords="architecture, construction, Uganda, Luweero, building design, residential construction, commercial construction, renovation"
+        url="/"
+      />
+      
       <HeroSection />
 
       {/* Service Cards */}

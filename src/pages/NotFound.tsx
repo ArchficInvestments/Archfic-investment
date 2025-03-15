@@ -2,6 +2,7 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Home } from "lucide-react";
+import SEO from '@/components/SEO';
 
 const NotFound = () => {
   const location = useLocation();
@@ -15,6 +16,12 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-arch-gray-100 px-4">
+      <SEO 
+        title="Page Not Found" 
+        description="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+        keywords="404, page not found, error page"
+        url={location.pathname}
+      />
       <div className="text-center max-w-lg animate-fade-up">
         <h1 className="text-8xl font-bold text-arch-navy mb-4">404</h1>
         <div className="w-16 h-1 bg-arch-gold mx-auto mb-8"></div>

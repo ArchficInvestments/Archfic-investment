@@ -5,9 +5,14 @@ import { useNavigate } from 'react-router-dom';
 const HeroSection = () => {
   const navigate = useNavigate();
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
+    
+    const img = new Image();
+    img.src = "/lovable-uploads/27e1ffd7-5ac0-4a89-97df-5f1652a1484c.png";
+    img.onload = () => setIsImageLoaded(true);
   }, []);
 
   const handleGetQuote = () => {
@@ -18,12 +23,16 @@ const HeroSection = () => {
     <section className="relative min-h-screen bg-arch-navy overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
+        className={`absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-1000 ${isImageLoaded ? 'opacity-70' : ''}`}
         style={{ 
           backgroundImage: 'url("/lovable-uploads/27e1ffd7-5ac0-4a89-97df-5f1652a1484c.png")', 
           backgroundPosition: 'center center' 
         }}
+        aria-hidden="true"
       ></div>
+
+      {/* Preload the hero image */}
+      <link rel="preload" as="image" href="/lovable-uploads/27e1ffd7-5ac0-4a89-97df-5f1652a1484c.png" />
 
       {/* Content */}
       <div className="relative container mx-auto px-4 h-screen flex flex-col justify-center">

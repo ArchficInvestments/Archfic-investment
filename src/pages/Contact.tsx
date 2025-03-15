@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
 import { toast } from 'sonner';
+import SEO from '@/components/SEO';
 
 const Contact = () => {
   useEffect(() => {
@@ -61,6 +62,13 @@ const Contact = () => {
 
   return (
     <main className="pt-20">
+      <SEO 
+        title="Contact Us" 
+        description="Get in touch with ArchFic Investment Ltd. Contact our team for consultations, quotes, and inquiries about our architecture and construction services in Luweero, Uganda."
+        keywords="contact ArchFic, construction consultation, architecture quote, Luweero builders, Uganda construction company contact"
+        url="/contact"
+      />
+      
       {/* Hero */}
       <section className="relative py-20 bg-arch-navy overflow-hidden">
         <div 

@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 
 const About = () => {
   useEffect(() => {
@@ -40,6 +41,13 @@ const About = () => {
 
   return (
     <main className="pt-20">
+      <SEO 
+        title="About Us" 
+        description="Learn about ArchFic Investment Ltd, a leading architecture and construction company in Luweero, Uganda with over 15 years of experience building dreams since 2005."
+        keywords="architecture company Uganda, construction experts, Luweero construction, building team, quality construction company"
+        url="/about"
+      />
+      
       {/* Hero */}
       <section className="relative py-20 bg-arch-navy overflow-hidden">
         <div 
@@ -73,8 +81,11 @@ const About = () => {
               <div className="relative overflow-hidden rounded-sm">
                 <img 
                   src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80" 
-                  alt="Our Story" 
+                  alt="ArchFic Investment team at construction site" 
                   className="w-full h-auto"
+                  loading="lazy"
+                  width="1331"
+                  height="888"
                 />
                 
                 {/* Yellow corner frame */}
@@ -157,8 +168,11 @@ const About = () => {
                 <div className="relative overflow-hidden rounded-sm">
                   <img 
                     src={member.image} 
-                    alt={member.name} 
+                    alt={`${member.name} - ${member.position} at ArchFic Investment`}
                     className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    width="687"
+                    height="800"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-arch-navy/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <h3 className="text-white font-medium text-lg">{member.name}</h3>

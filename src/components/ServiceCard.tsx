@@ -13,7 +13,9 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description, icon, backgroundImage, index }: ServiceCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,6 +42,16 @@ const ServiceCard = ({ title, description, icon, backgroundImage, index }: Servi
     };
   }, [index]);
 
+  useEffect(() => {
+    if (backgroundImage && imgRef.current) {
+      const img = new Image();
+      img.src = backgroundImage;
+      img.onload = () => setImageLoaded(true);
+    } else {
+      setImageLoaded(true);
+    }
+  }, [backgroundImage]);
+
   return (
     <div
       ref={cardRef}
@@ -48,10 +60,23 @@ const ServiceCard = ({ title, description, icon, backgroundImage, index }: Servi
       }`}
     >
       {backgroundImage && (
-        <div
-          className="absolute inset-0 opacity-20 bg-cover bg-center"
-          style={{ backgroundImage: `url(${backgroundImage})` }}
-        ></div>
+        <>
+          <div
+            className={`absolute inset-0 opacity-20 bg-cover bg-center transition-opacity duration-500 ${
+              imageLoaded ? 'opacity-20' : 'opacity-0'
+            }`}
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          ></div>
+          <img
+            ref={imgRef}
+            src={backgroundImage}
+            alt={title}
+            className="hidden"
+            loading="lazy"
+            width="800"
+            height="600"
+          />
+        </>
       )}
       <div className="relative p-8 h-full flex flex-col">
         {/* Yellow dot */}
