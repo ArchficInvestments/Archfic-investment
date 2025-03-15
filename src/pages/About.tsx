@@ -33,17 +33,43 @@ const About = () => {
   ];
 
   const stats = [
-    { value: "15+", label: "Years of Experience" },
+    { value: "7+", label: "Years of Experience" },
     { value: "250+", label: "Projects Completed" },
     { value: "50+", label: "Professional Staff" },
     { value: "99%", label: "Client Satisfaction" }
+  ];
+
+  const coreValues = [
+    { 
+      title: "Excellence & Innovation", 
+      description: "We combine cutting-edge design with precision construction."
+    },
+    { 
+      title: "Integrity & Transparency", 
+      description: "We build trust through honesty and professionalism."
+    },
+    { 
+      title: "Sustainability & Quality", 
+      description: "We use eco-friendly, high-quality materials to create lasting structures."
+    },
+    { 
+      title: "Client-Centric Approach", 
+      description: "Every project is customized to meet unique needs and exceed expectations."
+    }
+  ];
+
+  const whyChooseUs = [
+    "7+ years of expertise in architecture and construction",
+    "Custom-tailored designs for residential and commercial projects",
+    "Timely project completion without compromising quality",
+    "Advanced technology & sustainable solutions for modern living"
   ];
 
   return (
     <main className="pt-20">
       <SEO 
         title="About Us" 
-        description="Learn about ArchFic Investment Ltd, a leading architecture and construction company in Luweero, Uganda with over 6 years of experience building dreams since 2017."
+        description="Learn about ArchFic Investment Ltd, a leading architecture and construction company in Luweero, Uganda with over 7 years of experience building dreams since 2017."
         keywords="architecture company Uganda, construction experts, Luweero construction, building team, quality construction company"
         url="/about"
       />
@@ -73,7 +99,7 @@ const About = () => {
         </div>
       </section>
       
-      {/* Our Story */}
+      {/* Who We Are */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -96,38 +122,127 @@ const About = () => {
             <div>
               <div className="flex items-center mb-4">
                 <div className="w-6 h-[2px] bg-arch-gold mr-3"></div>
-                <h2 className="text-2xl font-semibold text-arch-navy">Our Story</h2>
+                <h2 className="text-2xl font-semibold text-arch-navy">Who We Are</h2>
               </div>
               
               <p className="text-arch-gray-800 mb-6">
-                Founded in 2017, ArchFic Investment Ltd. began as a small architectural design firm in Luweero, Uganda. 
-                With a passion for innovative design and quality construction, we've grown into a full-service 
-                architecture and construction company serving clients throughout Uganda.
+                Founded in 2017, ArchFic Investment Ltd. is a premier architecture and building company based in Luweero, Uganda. 
+                With over 7 years of industry experience, we specialize in architectural design, construction, and project 
+                management, delivering high-quality solutions tailored to our clients' needs.
               </p>
               
               <p className="text-arch-gray-800 mb-6">
-                Our mission is to create spaces that inspire, function beautifully, and stand the test of time. 
-                We believe in sustainable building practices, attention to detail, and delivering exceptional 
-                value to our clients.
+                Our expertise spans residential, commercial, and industrial projects, ensuring innovative designs 
+                and durable structures that stand the test of time. At ArchFic Investment Ltd., we don't just build 
+                structures—we create lasting impressions.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-16 bg-arch-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Mission */}
+            <div className="bg-white p-8 shadow-sm rounded-sm">
+              <div className="flex items-center mb-4">
+                <div className="w-6 h-[2px] bg-arch-gold mr-3"></div>
+                <h2 className="text-2xl font-semibold text-arch-navy">Our Mission</h2>
+              </div>
+              <p className="text-arch-gray-800">
+                To provide exceptional architectural and construction services that enhance communities, 
+                improve lifestyles, and contribute to Uganda's growing infrastructure.
+              </p>
+            </div>
+            
+            {/* Vision */}
+            <div className="bg-white p-8 shadow-sm rounded-sm">
+              <div className="flex items-center mb-4">
+                <div className="w-6 h-[2px] bg-arch-gold mr-3"></div>
+                <h2 className="text-2xl font-semibold text-arch-navy">Our Vision</h2>
+              </div>
+              <p className="text-arch-gray-800">
+                To be a leading force in architecture and construction in Uganda, setting industry standards 
+                in innovation, sustainability, and quality craftsmanship.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Core Values */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-4">
+              <div className="w-6 h-[2px] bg-arch-gold mr-3"></div>
+              <h2 className="text-2xl font-semibold text-arch-navy">Our Core Values</h2>
+              <div className="w-6 h-[2px] bg-arch-gold ml-3"></div>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {coreValues.map((value, index) => (
+              <div key={index} className="p-6 border border-arch-gray-200 rounded-sm hover:border-arch-gold transition-colors duration-300">
+                <div className="flex items-start mb-4">
+                  <CheckCircle size={24} className="text-arch-gold mt-1 mr-3 flex-shrink-0" />
+                  <h3 className="text-xl font-medium text-arch-navy">{value.title}</h3>
+                </div>
+                <p className="text-arch-gray-800">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Why Choose Us */}
+      <section className="py-20 bg-arch-navy text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center mb-6">
+                <div className="w-6 h-[2px] bg-arch-gold mr-3"></div>
+                <h2 className="text-2xl font-semibold text-white">Why Choose Us?</h2>
+              </div>
               
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="flex items-start">
-                  <CheckCircle size={18} className="text-arch-gold mt-1 mr-2" />
-                  <span className="text-arch-gray-800">Quality Craftsmanship</span>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle size={18} className="text-arch-gold mt-1 mr-2" />
-                  <span className="text-arch-gray-800">Innovative Designs</span>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle size={18} className="text-arch-gold mt-1 mr-2" />
-                  <span className="text-arch-gray-800">Experienced Team</span>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle size={18} className="text-arch-gold mt-1 mr-2" />
-                  <span className="text-arch-gray-800">Timely Delivery</span>
-                </div>
+              <div className="space-y-4">
+                {whyChooseUs.map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle size={20} className="text-arch-gold mt-1 mr-3 flex-shrink-0" />
+                    <p>{item}</p>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-8">
+                <p className="mb-6">
+                  Whether you're looking to design your dream home or develop a commercial space, 
+                  we bring your vision to life.
+                </p>
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center text-arch-gold border-b-2 border-arch-gold pb-1 transition-all duration-300 hover:text-white"
+                >
+                  Contact Us <ArrowRight size={16} className="ml-2" />
+                </Link>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-sm">
+                <img 
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                  alt="Modern architectural design by ArchFic Investment" 
+                  className="w-full h-auto"
+                  loading="lazy"
+                  width="1170"
+                  height="780"
+                />
+                
+                {/* Yellow corner frame */}
+                <div className="absolute bottom-[-20px] right-[-20px] w-[100px] h-[100px] border-b-4 border-r-4 border-arch-gold"></div>
               </div>
             </div>
           </div>
@@ -135,13 +250,13 @@ const About = () => {
       </section>
       
       {/* Stats */}
-      <section className="py-16 bg-arch-navy">
+      <section className="py-16 bg-arch-gray-100">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-arch-gold mb-2">{stat.value}</div>
-                <div className="text-white/80">{stat.label}</div>
+                <div className="text-arch-gray-800">{stat.label}</div>
               </div>
             ))}
           </div>

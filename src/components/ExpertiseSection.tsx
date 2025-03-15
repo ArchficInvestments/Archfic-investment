@@ -71,7 +71,9 @@ const ExpertiseSection = () => {
               </p>
               
               <p className="text-arch-gray-800 mb-6">
-                We successfully cope with tasks of varying complexity, provide long-term guarantees for the quality of our work. Our portfolio includes dozens of successfully completed projects of houses of different sizes, with high-quality finishes and good repairs. Building houses is our vocation.
+                With over 7 years of industry experience, we specialize in architectural design, construction, and project management. 
+                We successfully cope with tasks of varying complexity, provide long-term guarantees for the quality of our work, and 
+                deliver high-quality solutions tailored to our clients' needs.
               </p>
               
               <Link
