@@ -9,12 +9,12 @@ const WhoWeAreSection = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-sm">
               <img 
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80" 
-                alt="ArchFic Investment team at construction site" 
+                src="/lovable-uploads/9639e92e-28d5-4b64-a7bd-c6f5982cb61a.png" 
+                alt="ArchFic construction team at sunset on a building site" 
                 className="w-full h-auto"
                 loading="lazy"
-                width="1331"
-                height="888"
+                width="1000" 
+                height="667"
               />
               
               {/* Yellow corner frame */}
