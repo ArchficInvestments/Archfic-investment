@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import SEO from '@/components/SEO';
 import HeroSection from '@/components/HeroSection';
@@ -14,7 +13,6 @@ import MissionVisionSection from '@/components/about/MissionVisionSection';
 import CoreValuesSection from '@/components/about/CoreValuesSection';
 import WhyChooseUsSection from '@/components/about/WhyChooseUsSection';
 import StatsSection from '@/components/about/StatsSection';
-import TeamSection from '@/components/about/TeamSection';
 
 const Index = () => {
   useEffect(() => {
@@ -178,7 +176,6 @@ const Index = () => {
         <CoreValuesSection />
         <WhyChooseUsSection />
         <StatsSection />
-        <TeamSection />
       </section>
 
       {/* Service Cards */}

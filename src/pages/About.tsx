@@ -7,7 +7,6 @@ import MissionVisionSection from '@/components/about/MissionVisionSection';
 import CoreValuesSection from '@/components/about/CoreValuesSection';
 import WhyChooseUsSection from '@/components/about/WhyChooseUsSection';
 import StatsSection from '@/components/about/StatsSection';
-import TeamSection from '@/components/about/TeamSection';
 import CtaSection from '@/components/about/CtaSection';
 
 const About = () => {
@@ -30,7 +29,6 @@ const About = () => {
       <CoreValuesSection />
       <WhyChooseUsSection />
       <StatsSection />
-      <TeamSection />
       <CtaSection />
     </main>
   );
