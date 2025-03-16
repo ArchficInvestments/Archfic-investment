@@ -1,42 +1,32 @@
 
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <footer className="bg-arch-navy text-white pt-16 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo and About */}
           <div>
-            <a 
-              href="#home" 
-              className="flex items-center mb-4"
-              onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}
-            >
+            <Link to="/" className="flex items-center mb-4">
               <span className="text-white font-playfair font-bold text-2xl">ArchFic</span>
               <span className="text-arch-gold font-playfair font-medium text-2xl">Investment</span>
-            </a>
+            </Link>
             <p className="text-white/70 mb-6">
               Building the future with innovative designs and quality construction in Luweero, Uganda and beyond.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/70 hover:text-arch-gold transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-arch-gold transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="text-white/70 hover:text-arch-gold transition-colors">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-arch-gold transition-colors">
                 <Twitter size={18} />
               </a>
-              <a href="#" className="text-white/70 hover:text-arch-gold transition-colors">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-arch-gold transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="text-white/70 hover:text-arch-gold transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-arch-gold transition-colors">
                 <Linkedin size={18} />
               </a>
             </div>
@@ -47,49 +37,29 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6 relative gold-border-left pl-4">Our Services</h3>
             <ul className="space-y-3">
               <li>
-                <a 
-                  href="#services" 
-                  className="text-white/70 hover:text-arch-gold transition-colors"
-                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}
-                >
+                <Link to="/services" className="text-white/70 hover:text-arch-gold transition-colors">
                   Architectural Design
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#services" 
-                  className="text-white/70 hover:text-arch-gold transition-colors"
-                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}
-                >
+                <Link to="/services" className="text-white/70 hover:text-arch-gold transition-colors">
                   Residential Construction
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#services" 
-                  className="text-white/70 hover:text-arch-gold transition-colors"
-                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}
-                >
+                <Link to="/services" className="text-white/70 hover:text-arch-gold transition-colors">
                   Commercial Construction
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#services" 
-                  className="text-white/70 hover:text-arch-gold transition-colors"
-                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}
-                >
+                <Link to="/services" className="text-white/70 hover:text-arch-gold transition-colors">
                   Project Management
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#services" 
-                  className="text-white/70 hover:text-arch-gold transition-colors"
-                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}
-                >
+                <Link to="/services" className="text-white/70 hover:text-arch-gold transition-colors">
                   Renovations & Remodeling
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -99,49 +69,29 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6 relative gold-border-left pl-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a 
-                  href="#home" 
-                  className="text-white/70 hover:text-arch-gold transition-colors"
-                  onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}
-                >
+                <Link to="/" className="text-white/70 hover:text-arch-gold transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#about" 
-                  className="text-white/70 hover:text-arch-gold transition-colors"
-                  onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}
-                >
+                <Link to="/about" className="text-white/70 hover:text-arch-gold transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#services" 
-                  className="text-white/70 hover:text-arch-gold transition-colors"
-                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}
-                >
+                <Link to="/services" className="text-white/70 hover:text-arch-gold transition-colors">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#contact" 
-                  className="text-white/70 hover:text-arch-gold transition-colors"
-                  onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}
-                >
+                <Link to="/gallery" className="text-white/70 hover:text-arch-gold transition-colors">
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-white/70 hover:text-arch-gold transition-colors">
                   Contact
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#contact" 
-                  className="text-white/70 hover:text-arch-gold transition-colors"
-                  onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}
-                >
-                  Get a Quote
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -160,7 +110,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-arch-gold mr-3" />
-                <span className="text-white/70">info@archfic.com</span>
+                <a href="mailto:info@archfic.com" className="text-white/70 hover:text-arch-gold transition-colors">info@archfic.com</a>
               </li>
             </ul>
           </div>
@@ -177,18 +127,12 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex space-x-6">
-              <a 
-                href="#" 
-                className="text-white/50 text-sm hover:text-arch-gold transition-colors"
-              >
+              <Link to="/privacy-policy" className="text-white/50 text-sm hover:text-arch-gold transition-colors">
                 Privacy Policy
-              </a>
-              <a 
-                href="#" 
-                className="text-white/50 text-sm hover:text-arch-gold transition-colors"
-              >
+              </Link>
+              <Link to="/terms-of-service" className="text-white/50 text-sm hover:text-arch-gold transition-colors">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -57,6 +57,9 @@ const ServiceCard = ({ title, description, icon, backgroundImage, index }: Servi
     }
   }, [backgroundImage]);
 
+  // Create a sanitized title for the URL
+  const serviceSlug = title.toLowerCase().replace(/\s+/g, '-');
+
   return (
     <div
       ref={cardRef}
@@ -92,7 +95,7 @@ const ServiceCard = ({ title, description, icon, backgroundImage, index }: Servi
         <p className="text-white/70 mb-6 flex-grow">{description}</p>
         
         <Link 
-          to="/services" 
+          to={`/services#${serviceSlug}`}
           className="inline-flex items-center text-sm font-medium text-white hover:text-arch-gold transition-colors duration-300"
         >
           Read More <ArrowRight size={16} className="ml-2" />

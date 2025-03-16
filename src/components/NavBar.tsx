@@ -17,14 +17,6 @@ const NavBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
-  };
-
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
@@ -59,12 +51,6 @@ const NavBar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className="bg-arch-navy text-white px-6 py-2 rounded hover:bg-arch-gold transition-colors duration-300"
-            >
-              Get a Quote
-            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
