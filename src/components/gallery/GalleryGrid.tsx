@@ -4,24 +4,18 @@ import { GalleryCategory } from '@/pages/Gallery';
 import { GalleryItem } from '@/data/galleryData';
 import GalleryCard from './GalleryCard';
 import { Button } from '@/components/ui/button';
-import { Image, ImageIcon, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Image, ImageIcon } from 'lucide-react';
 
 interface GalleryGridProps {
   items: GalleryItem[];
   activeFilter: GalleryCategory;
   setFilter: (filter: GalleryCategory) => void;
-  page: number;
-  setPage: (page: number) => void;
-  itemsPerPage: number;
 }
 
 const GalleryGrid = ({ 
   items, 
   activeFilter, 
   setFilter,
-  page,
-  setPage,
-  itemsPerPage
 }: GalleryGridProps) => {
   const categories: { value: GalleryCategory; label: string; icon: React.ReactNode }[] = [
     { value: 'all', label: 'All', icon: <Image size={18} /> },
@@ -34,24 +28,6 @@ const GalleryGrid = ({
   const filteredItems = activeFilter === 'all' 
     ? items 
     : items.filter(item => item.category === activeFilter);
-
-  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
-  const startIndex = (page - 1) * itemsPerPage;
-  const paginatedItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
-
-  const handlePrevPage = () => {
-    if (page > 1) {
-      setPage(page - 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
-
-  const handleNextPage = () => {
-    if (page < totalPages) {
-      setPage(page + 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="py-8 bg-gray-50" id="gallery">
@@ -73,44 +49,16 @@ const GalleryGrid = ({
           ))}
         </div>
         
-        {paginatedItems.length === 0 ? (
+        {filteredItems.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-gray-500">No images found.</p>
           </div>
         ) : (
-          <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {paginatedItems.map((item) => (
-                <GalleryCard key={item.id} item={item} />
-              ))}
-            </div>
-            
-            {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-4 mt-8">
-                <Button 
-                  variant="outline" 
-                  onClick={handlePrevPage} 
-                  disabled={page === 1}
-                  className="flex items-center gap-1"
-                >
-                  <ChevronLeft size={16} />
-                </Button>
-                
-                <div className="text-sm text-gray-600">
-                  {page} / {totalPages}
-                </div>
-                
-                <Button 
-                  variant="outline" 
-                  onClick={handleNextPage} 
-                  disabled={page === totalPages}
-                  className="flex items-center gap-1"
-                >
-                  <ChevronRight size={16} />
-                </Button>
-              </div>
-            )}
-          </>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {filteredItems.map((item) => (
+              <GalleryCard key={item.id} item={item} />
+            ))}
+          </div>
         )}
       </div>
     </section>
