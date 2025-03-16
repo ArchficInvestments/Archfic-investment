@@ -23,7 +23,7 @@ const ContactInfo = () => {
         </li>
         <li className="flex items-center">
           <Mail size={18} className="text-arch-gold mr-3" />
-          <a href="mailto:info@archfic.com" className="text-white/70 hover:text-arch-gold transition-colors">info@archfic.com</a>
+          <a href="mailto:archficinvestments@gmail.com" className="text-white/70 hover:text-arch-gold transition-colors">archficinvestments@gmail.com</a>
         </li>
       </ul>
     </div>

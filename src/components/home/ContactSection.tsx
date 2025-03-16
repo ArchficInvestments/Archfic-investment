@@ -30,7 +30,7 @@ const ContactSection = ({ isVisible }: { isVisible: boolean }) => {
     {
       icon: Mail,
       title: "Email Address",
-      details: ["info@archfic.com", "support@archfic.com"]
+      details: ["archficinvestments@gmail.com"]
     }
   ];
 
