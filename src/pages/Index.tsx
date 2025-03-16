@@ -83,7 +83,7 @@ const Index = () => {
     {
       title: "Architectural Design",
       description: "Our team of experienced architects creates innovative, functional, and aesthetically pleasing designs tailored to your specific needs and preferences.",
-      image: "/lovable-uploads/91cf1076-7091-4501-ac07-b5a7e0f5649b.png",
+      image: "/lovable-uploads/e0c3b996-c80e-44e2-b2bc-448fa4cc8d95.png",
       features: [
         "Custom residential and commercial designs",
         "3D rendering and visualization",
