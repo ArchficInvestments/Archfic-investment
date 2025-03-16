@@ -6,8 +6,9 @@ import { useState } from 'react';
 const LocationMap = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
   
-  // Luweero, Uganda coordinates (approximate)
-  const location = { lat: 0.8478, lng: 32.4762 };
+  // Exact coordinates for Pension House Building, Luweero: 0°50'25.3"N 32°29'38.9"E
+  // Converted to decimal format
+  const location = { lat: 0.8403611, lng: 32.4941389 };
   
   const mapContainerStyle = {
     width: '100%',
@@ -30,7 +31,7 @@ const LocationMap = () => {
             <GoogleMap
               mapContainerStyle={mapContainerStyle}
               center={location}
-              zoom={15}
+              zoom={16}
               onLoad={onMapLoad}
             >
               <Marker position={location} />
