@@ -8,7 +8,11 @@ const ContactInfo = () => {
       <ul className="space-y-4">
         <li className="flex items-start">
           <MapPin size={18} className="text-arch-gold mt-1 mr-3" />
-          <span className="text-white/70">Luweero, Uganda</span>
+          <div className="text-white/70">
+            <div>Pension House Building, Luweero</div>
+            <div>Near Luweero Diocese Guest House/Hotel</div>
+            <div>Uganda</div>
+          </div>
         </li>
         <li className="flex items-center">
           <Phone size={18} className="text-arch-gold mr-3" />

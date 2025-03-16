@@ -13,7 +13,8 @@ const LocationMap = () => {
             <div className="text-center">
               <MapPin size={48} className="mx-auto text-arch-navy opacity-20 mb-4" />
               <p className="text-arch-gray-800">Map would be displayed here</p>
-              <p className="text-arch-gray-800 mt-2">Luweero, Uganda</p>
+              <p className="text-arch-gray-800 mt-2">Pension House Building, Luweero</p>
+              <p className="text-arch-gray-800">Near Luweero Diocese Guest House/Hotel</p>
             </div>
           </div>
         </div>

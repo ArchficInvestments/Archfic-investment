@@ -16,7 +16,11 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Our Location",
-      details: ["Luweero", "Uganda"]
+      details: [
+        "Pension House Building, Luweero",
+        "Near Luweero Diocese Guest House/Hotel",
+        "Uganda"
+      ]
     },
     {
       icon: Phone,
