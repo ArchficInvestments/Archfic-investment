@@ -126,5 +126,77 @@ export const galleryItems: GalleryItem[] = [
     category: "residential",
     location: "Tweestroom Project",
     year: 2024
+  },
+  {
+    id: 23,
+    title: "Bamboo Scaffolding Construction",
+    description: "Traditional bamboo scaffolding techniques used in modern building construction, showcasing sustainable building practices.",
+    imageUrl: "/lovable-uploads/bc1af56f-2872-43ee-b174-dcfef35ae5dd.png",
+    category: "commercial",
+    location: "Kampala, Uganda",
+    year: 2023
+  },
+  {
+    id: 24,
+    title: "Multi-Story Commercial Development",
+    description: "Construction of a reinforced concrete commercial building with multiple floors for office and retail spaces.",
+    imageUrl: "/lovable-uploads/485cb351-5428-4a3a-89d3-df43c5782470.png",
+    category: "commercial",
+    location: "Entebbe, Uganda",
+    year: 2023
+  },
+  {
+    id: 25,
+    title: "Foundation Construction",
+    description: "Precision concrete foundation work for a residential project, showcasing our attention to structural detail.",
+    imageUrl: "/lovable-uploads/a8f52eff-7a1b-40f9-bd5b-5e8d6c44ef7b.png",
+    category: "residential",
+    location: "Jinja, Uganda",
+    year: 2022
+  },
+  {
+    id: 26,
+    title: "Steel Reinforcement Installation",
+    description: "Specialized steel reinforcement work for a commercial project, demonstrating our engineering expertise.",
+    imageUrl: "/lovable-uploads/a75791ea-b76a-4871-b13d-862d31d32a38.png",
+    category: "commercial",
+    location: "Kampala, Uganda",
+    year: 2022
+  },
+  {
+    id: 27,
+    title: "Residential Development Plan",
+    description: "Detailed site planning for a residential neighborhood, focusing on optimal land use and community integration.",
+    imageUrl: "/lovable-uploads/7621b08a-3b70-417a-baf4-0a46a9665a5e.png",
+    category: "residential",
+    location: "Mukono, Uganda",
+    year: 2024
+  },
+  {
+    id: 28,
+    title: "Custom Home Floor Plan",
+    description: "Comprehensive floor plan for a spacious family home with multiple bedrooms, open living areas, and modern amenities.",
+    imageUrl: "/lovable-uploads/3fb417ee-4ae7-4832-8f61-814aec9ef18e.png",
+    category: "residential",
+    location: "Kampala, Uganda",
+    year: 2023
+  },
+  {
+    id: 29,
+    title: "Eco-Home Design Section",
+    description: "Cross-section view of an eco-friendly home design, highlighting natural ventilation and lighting strategies.",
+    imageUrl: "/lovable-uploads/dd3766b8-28e7-4cd1-ad07-1e96d4360ea3.png",
+    category: "residential",
+    location: "Fort Portal, Uganda",
+    year: 2024
+  },
+  {
+    id: 30,
+    title: "Modern Residence Floor Plans",
+    description: "Detailed architectural floor plans for a contemporary residence with efficient space utilization and thoughtful design.",
+    imageUrl: "/lovable-uploads/85cfa8aa-2677-4786-8c19-b712a04cdc06.png",
+    category: "residential",
+    location: "Entebbe, Uganda",
+    year: 2023
   }
 ];
