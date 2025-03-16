@@ -209,7 +209,6 @@ const Index = () => {
                   "ArchFic Investment delivered our dream home on time and within budget. Their attention to detail and commitment to quality craftsmanship exceeded our expectations."
                 </p>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-arch-gray-200 mr-4"></div>
                   <div>
                     <h4 className="font-medium text-arch-navy">John Doe</h4>
                     <p className="text-sm text-arch-gray-800">Residential Client</p>
