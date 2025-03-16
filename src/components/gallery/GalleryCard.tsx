@@ -21,7 +21,7 @@ const GalleryCard = ({ item }: GalleryCardProps) => {
         )}
         <img
           src={item.imageUrl}
-          alt={item.title}
+          alt={item.title || "Architectural drawing"}
           className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
           onLoad={() => setIsLoading(false)}
         />

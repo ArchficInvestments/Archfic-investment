@@ -170,5 +170,41 @@ export const galleryItems: GalleryItem[] = [
     category: "renovations",
     location: "Fort Portal, Uganda",
     year: 2021
+  },
+  {
+    id: 19,
+    title: "",
+    description: "",
+    imageUrl: "/lovable-uploads/bb30198d-f0db-4c43-8e87-78a5886a3ce2.png",
+    category: "residential",
+    location: "",
+    year: 2024
+  },
+  {
+    id: 20,
+    title: "",
+    description: "",
+    imageUrl: "/lovable-uploads/b6595764-f563-49bb-94d2-f374ef45033e.png",
+    category: "residential",
+    location: "",
+    year: 2024
+  },
+  {
+    id: 21,
+    title: "",
+    description: "",
+    imageUrl: "/lovable-uploads/d0ef28b6-b934-4c09-86a3-932d88c64ab7.png",
+    category: "commercial",
+    location: "",
+    year: 2024
+  },
+  {
+    id: 22,
+    title: "",
+    description: "",
+    imageUrl: "/lovable-uploads/854f8fce-3949-4cbd-95d1-356f2b2d9386.png",
+    category: "residential",
+    location: "Tweestroom Project",
+    year: 2024
   }
 ];
