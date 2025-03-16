@@ -11,7 +11,7 @@ const ServicesHero = ({ isVisible }: ServicesHeroProps) => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
         style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80")', 
+          backgroundImage: 'url("/lovable-uploads/fcbce94b-f77a-436c-8d38-8cb1cd327ee8.png")', 
         }}
       ></div>
       
