@@ -38,8 +38,8 @@ const ExpertiseSection = () => {
           <div className={`relative transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="relative overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
-                alt="Construction experts" 
+                src="/lovable-uploads/91cf1076-7091-4501-ac07-b5a7e0f5649b.png" 
+                alt="Modern residential design with mountain view" 
                 className="w-full h-auto rounded-sm"
               />
               
