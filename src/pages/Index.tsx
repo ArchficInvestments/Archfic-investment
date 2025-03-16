@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import SEO from '@/components/SEO';
 import HeroSection from '@/components/HeroSection';
@@ -36,7 +37,6 @@ const Index = () => {
     about: false,
     services: false,
     expertise: false,
-    offers: false,
     testimonials: false,
     contact: false,
   });
@@ -108,15 +108,6 @@ const Index = () => {
     }
   ];
 
-  const offerItems = [
-    { title: "Cosmetic repairs", price: "2500" },
-    { title: "Major repairs", price: "5000" },
-    { title: "House construction", price: "15000" },
-    { title: "Design project", price: "1000" },
-    { title: "Log house", price: "8000" },
-    { title: "Frame house", price: "12000" }
-  ];
-
   const contactInfo = [
     {
       icon: MapPin,
@@ -181,48 +172,6 @@ const Index = () => {
       {/* Services Section - Now using the ServicesList component */}
       <section id="services" className="bg-white scroll-mt-20">
         <ServicesList services={services.slice(0, 5)} isVisible={visibleSections.services} />
-      </section>
-
-      {/* Offers Section */}
-      <section id="offers" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="mb-12">
-            <div className="flex items-center mb-4">
-              <div className="w-6 h-[2px] bg-arch-gold mr-3"></div>
-              <h2 className="text-2xl font-semibold text-arch-navy">Offers</h2>
-            </div>
-            <p className="text-arch-gray-800 max-w-lg">
-              We regularly expand the range of services to make our customers feel comfortable.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {offerItems.map((item, index) => (
-              <div 
-                key={index} 
-                className="group relative bg-white border border-arch-gray-200 hover:border-arch-gold transition-all duration-300 p-6 rounded-sm"
-              >
-                <h3 className="text-arch-navy font-medium text-lg mb-2">{item.title}</h3>
-                <div className="flex items-baseline mb-4">
-                  <span className="text-arch-gray-800">from</span>
-                  <span className="text-arch-navy font-medium text-xl mx-2">${item.price}</span>
-                  <span className="text-arch-gray-800">per</span>
-                </div>
-                <a 
-                  href="#contact" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="inline-flex items-center text-sm font-medium text-arch-navy group-hover:text-arch-gold transition-colors duration-300"
-                >
-                  Order Now <ArrowRight size={16} className="ml-2" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Testimonials */}
@@ -402,7 +351,7 @@ const Index = () => {
                     </span>
                   ) : (
                     <span className="inline-flex items-center">
-                      <Send size={16} className="ml-2" />
+                      <Send size={16} className="mr-2" />
                       Send Message
                     </span>
                   )}
