@@ -5,6 +5,9 @@ import ServiceCard from '@/components/ServiceCard';
 import ExpertiseSection from '@/components/ExpertiseSection';
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin, Send } from 'lucide-react';
 import { toast } from 'sonner';
+import { services } from '@/data/services';
+import ServicesList from '@/components/services/ServicesList';
+import ServicesCta from '@/components/services/ServicesCta';
 
 // About page components
 import AboutHero from '@/components/about/AboutHero';
@@ -28,6 +31,41 @@ const Index = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [visibleSections, setVisibleSections] = useState<{[key: string]: boolean}>({
+    hero: false,
+    about: false,
+    services: false,
+    expertise: false,
+    offers: false,
+    testimonials: false,
+    contact: false,
+  });
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisibleSections((prev) => ({
+            ...prev,
+            [entry.target.id]: true,
+          }));
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -77,64 +115,6 @@ const Index = () => {
     { title: "Design project", price: "1000" },
     { title: "Log house", price: "8000" },
     { title: "Frame house", price: "12000" }
-  ];
-
-  const services = [
-    {
-      title: "Architectural Design",
-      description: "Our team of experienced architects creates innovative, functional, and aesthetically pleasing designs tailored to your specific needs and preferences.",
-      image: "/lovable-uploads/e0c3b996-c80e-44e2-b2bc-448fa4cc8d95.png",
-      features: [
-        "Custom residential and commercial designs",
-        "3D rendering and visualization",
-        "Space planning and optimization",
-        "Green building design"
-      ]
-    },
-    {
-      title: "Residential Construction",
-      description: "From modern urban homes to traditional country houses, we build high-quality residential properties with attention to detail and craftsmanship.",
-      image: "/lovable-uploads/a0e2168b-d411-46c9-8eec-45d545588260.png",
-      features: [
-        "Custom home building",
-        "Multi-family housing",
-        "Luxury villas and estates",
-        "Affordable housing solutions"
-      ]
-    },
-    {
-      title: "Commercial Construction",
-      description: "We deliver commercial projects that meet the highest standards of quality, functionality, and design, helping businesses create spaces that reflect their brand and values.",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      features: [
-        "Office buildings and workspaces",
-        "Retail and shopping centers",
-        "Hospitality and leisure facilities",
-        "Industrial and warehouse construction"
-      ]
-    },
-    {
-      title: "Project Management",
-      description: "Our project management services ensure your construction project is completed on time, within budget, and to the highest quality standards.",
-      image: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
-      features: [
-        "Budget development and management",
-        "Schedule creation and monitoring",
-        "Quality control and assurance",
-        "Risk management and mitigation"
-      ]
-    },
-    {
-      title: "Renovations & Remodeling",
-      description: "Transform your existing space with our renovation and remodeling services, designed to update, improve, and add value to your property.",
-      image: "/lovable-uploads/d1d33731-fa6a-491a-8d63-d700a324d7e6.png",
-      features: [
-        "Kitchen and bathroom remodeling",
-        "Home additions and extensions",
-        "Interior and exterior renovations",
-        "Historic restoration"
-      ]
-    }
   ];
 
   const contactInfo = [
@@ -198,72 +178,13 @@ const Index = () => {
       {/* Expertise Section */}
       <ExpertiseSection />
 
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-white scroll-mt-20">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center mb-12 text-center">
-            <div className="flex items-center mb-4">
-              <div className="w-6 h-[2px] bg-arch-gold mr-3"></div>
-              <h2 className="text-2xl font-semibold text-arch-navy">Our Services</h2>
-            </div>
-            <p className="text-arch-gray-800 max-w-2xl mx-auto">
-              We provide a comprehensive range of architectural and construction services tailored to meet the unique 
-              needs of each client and project.
-            </p>
-          </div>
-          
-          <div className="space-y-20">
-            {services.map((service, index) => (
-              <div 
-                key={index} 
-                className={`grid md:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
-              >
-                <div className={`relative ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                  <div className="relative overflow-hidden rounded-sm">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className="w-full h-auto"
-                    />
-                    
-                    {/* Yellow corner frame */}
-                    <div className={`absolute ${index % 2 === 1 ? 'top-[-20px] right-[-20px] border-t-4 border-r-4' : 'top-[-20px] left-[-20px] border-t-4 border-l-4'} w-[100px] h-[100px] border-arch-gold`}></div>
-                  </div>
-                </div>
-                
-                <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                  <h3 className="text-2xl font-semibold text-arch-navy mb-4">{service.title}</h3>
-                  <p className="text-arch-gray-800 mb-6">{service.description}</p>
-                  
-                  <div className="space-y-3 mb-6">
-                    {service.features.map((feature, i) => (
-                      <div key={i} className="flex items-start">
-                        <CheckCircle size={18} className="text-arch-gold mt-1 mr-3 flex-shrink-0" />
-                        <span className="text-arch-gray-800">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <a 
-                    href="#contact"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const contactSection = document.getElementById('contact');
-                      if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    className="inline-flex items-center text-arch-navy border-b-2 border-arch-gold pb-1 transition-all duration-300 hover:text-arch-gold"
-                  >
-                    Request Service <ArrowRight size={16} className="ml-2" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Services Section - Now using the ServicesList component */}
+      <section id="services" className="bg-white scroll-mt-20">
+        <ServicesList services={services.slice(0, 5)} isVisible={visibleSections.services} />
       </section>
 
       {/* Offers Section */}
-      <section className="py-20 bg-white">
+      <section id="offers" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="mb-12">
             <div className="flex items-center mb-4">
@@ -305,7 +226,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-arch-gray-100">
+      <section id="testimonials" className="py-20 bg-arch-gray-100">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mb-12 text-center">
             <div className="flex items-center mb-4">
@@ -510,28 +431,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-arch-navy">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-6 md:mb-0">
-              <h2 className="text-2xl font-semibold text-white mb-2">Ready to Start Your Project?</h2>
-              <p className="text-white/70">Contact us today for a free consultation and quote.</p>
-            </div>
-            <a 
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                const contactSection = document.getElementById('contact');
-                if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
-              }} 
-              className="bg-arch-gold text-arch-navy px-8 py-3 font-medium rounded hover:bg-white transition-all duration-300"
-            >
-              Get a Quote
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* CTA - Now using the ServicesCta component */}
+      <ServicesCta />
     </main>
   );
 };
