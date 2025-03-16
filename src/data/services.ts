@@ -38,7 +38,7 @@ export const services: ServiceData[] = [
   {
     title: "Project Management",
     description: "Our project management services ensure your construction project is completed on time, within budget, and to the highest quality standards.",
-    image: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+    image: "/lovable-uploads/28cef5c4-7df4-4b0a-8977-da34130766cc.png",
     features: [
       "Budget development and management",
       "Schedule creation and monitoring",
