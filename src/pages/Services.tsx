@@ -43,7 +43,7 @@ const Services = () => {
     {
       title: "Architectural Design",
       description: "Our team of experienced architects creates innovative, functional, and aesthetically pleasing designs tailored to your specific needs and preferences.",
-      image: "https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80",
+      image: "/lovable-uploads/91cf1076-7091-4501-ac07-b5a7e0f5649b.png",
       features: [
         "Custom residential and commercial designs",
         "3D rendering and visualization",
