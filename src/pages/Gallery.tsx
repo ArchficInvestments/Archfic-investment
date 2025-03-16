@@ -10,7 +10,7 @@ export type GalleryCategory = 'all' | 'residential' | 'commercial' | 'interiors'
 const Gallery = () => {
   const [filter, setFilter] = useState<GalleryCategory>('all');
   const [page, setPage] = useState(1);
-  const ITEMS_PER_PAGE = 9;
+  const ITEMS_PER_PAGE = 12;
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,11 +22,11 @@ const Gallery = () => {
   }, [filter]);
 
   return (
-    <main className="pt-20">
+    <main>
       <SEO 
         title="Gallery" 
-        description="Explore our completed architecture and construction projects in Uganda. Browse photos of residential homes, commercial buildings, and renovations."
-        keywords="architecture gallery, construction photos, building projects, Uganda architecture, Luweero construction projects"
+        description="Explore our project gallery"
+        keywords="architecture gallery, construction photos, building projects"
         url="/gallery"
       />
       

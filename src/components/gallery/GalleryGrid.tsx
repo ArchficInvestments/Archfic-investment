@@ -24,7 +24,7 @@ const GalleryGrid = ({
   itemsPerPage
 }: GalleryGridProps) => {
   const categories: { value: GalleryCategory; label: string; icon: React.ReactNode }[] = [
-    { value: 'all', label: 'All Projects', icon: <Image size={18} /> },
+    { value: 'all', label: 'All', icon: <Image size={18} /> },
     { value: 'residential', label: 'Residential', icon: <ImageIcon size={18} /> },
     { value: 'commercial', label: 'Commercial', icon: <ImageIcon size={18} /> },
     { value: 'interiors', label: 'Interiors', icon: <ImageIcon size={18} /> },
@@ -54,49 +54,39 @@ const GalleryGrid = ({
   };
 
   return (
-    <section className="py-16 bg-gray-50" id="gallery">
+    <section className="py-8 bg-gray-50" id="gallery">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-arch-navy mb-4">
-            Explore Our <span className="text-arch-gold">Projects</span>
-          </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Browse our diverse portfolio of successful projects, showcasing our commitment to 
-            quality craftsmanship and innovative design.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-2 mt-8">
-            {categories.map((category) => (
-              <Button
-                key={category.value}
-                variant={activeFilter === category.value ? "default" : "outline"}
-                className={`
-                  flex items-center gap-2 px-4 py-2
-                  ${activeFilter === category.value ? 'bg-arch-navy' : 'text-arch-navy'}
-                `}
-                onClick={() => setFilter(category.value)}
-              >
-                {category.icon}
-                {category.label}
-              </Button>
-            ))}
-          </div>
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {categories.map((category) => (
+            <Button
+              key={category.value}
+              variant={activeFilter === category.value ? "default" : "outline"}
+              className={`
+                flex items-center gap-2 px-4 py-2
+                ${activeFilter === category.value ? 'bg-arch-navy' : 'text-arch-navy'}
+              `}
+              onClick={() => setFilter(category.value)}
+            >
+              {category.icon}
+              {category.label}
+            </Button>
+          ))}
         </div>
         
         {paginatedItems.length === 0 ? (
           <div className="text-center py-12">
-            <p className="text-gray-500">No projects found in this category.</p>
+            <p className="text-gray-500">No images found.</p>
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {paginatedItems.map((item) => (
                 <GalleryCard key={item.id} item={item} />
               ))}
             </div>
             
             {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-4 mt-12">
+              <div className="flex justify-center items-center gap-4 mt-8">
                 <Button 
                   variant="outline" 
                   onClick={handlePrevPage} 
@@ -104,11 +94,10 @@ const GalleryGrid = ({
                   className="flex items-center gap-1"
                 >
                   <ChevronLeft size={16} />
-                  Previous
                 </Button>
                 
                 <div className="text-sm text-gray-600">
-                  Page {page} of {totalPages}
+                  {page} / {totalPages}
                 </div>
                 
                 <Button 
@@ -117,7 +106,6 @@ const GalleryGrid = ({
                   disabled={page === totalPages}
                   className="flex items-center gap-1"
                 >
-                  Next
                   <ChevronRight size={16} />
                 </Button>
               </div>
