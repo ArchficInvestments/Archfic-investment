@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
 import { toast } from 'sonner';
 import SEO from '@/components/SEO';
+import { Button } from '@/components/ui/button';
 
 const Contact = () => {
   useEffect(() => {
@@ -26,20 +27,22 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    // Open WhatsApp with the form data
+    const phoneNumber = '+256702318582'; // Use the first phone number
+    const message = `Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0ASubject: ${formData.subject}%0AMessage: ${formData.message}`;
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast.success('Your message has been sent successfully!');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-      });
-      setIsSubmitting(false);
-    }, 1500);
+    // Show success message
+    toast.success('Redirecting to WhatsApp...');
+    
+    // Clear form (optional)
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+    });
   };
 
   const contactInfo = [
@@ -202,10 +205,10 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 
-                <button 
+                <Button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="bg-arch-navy text-white px-8 py-3 rounded-sm hover:bg-arch-gold transition-colors duration-300 flex items-center justify-center"
+                  className="bg-arch-navy text-white px-8 py-3 rounded-sm hover:bg-arch-gold transition-colors duration-300"
                 >
                   {isSubmitting ? (
                     <span className="inline-flex items-center">
@@ -221,7 +224,7 @@ const Contact = () => {
                       Send Message
                     </span>
                   )}
-                </button>
+                </Button>
               </form>
             </div>
             
