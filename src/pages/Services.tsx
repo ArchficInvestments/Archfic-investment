@@ -54,7 +54,7 @@ const Services = () => {
     {
       title: "Residential Construction",
       description: "From modern urban homes to traditional country houses, we build high-quality residential properties with attention to detail and craftsmanship.",
-      image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+      image: "/lovable-uploads/a0e2168b-d411-46c9-8eec-45d545588260.png",
       features: [
         "Custom home building",
         "Multi-family housing",
