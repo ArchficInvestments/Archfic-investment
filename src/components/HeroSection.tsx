@@ -1,18 +1,23 @@
+
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 const HeroSection = () => {
   const navigate = useNavigate();
   const [isLoaded, setIsLoaded] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   useEffect(() => {
     setIsLoaded(true);
     const img = new Image();
     img.src = "/lovable-uploads/cf260a4a-9a98-43bd-9770-a56edbec72d6.png";
     img.onload = () => setIsImageLoaded(true);
   }, []);
+
   const handleGetQuote = () => {
     navigate('/contact');
   };
+
   return <section className="relative min-h-screen bg-arch-navy overflow-hidden">
       {/* Background Image */}
       <div className={`absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-1000 ${isImageLoaded ? 'opacity-70' : ''}`} style={{
@@ -45,14 +50,10 @@ const HeroSection = () => {
             <button onClick={handleGetQuote} className="bg-arch-gold text-arch-navy px-8 py-3 font-medium rounded hover:bg-white transition-all duration-300">
               Get a quote
             </button>
-            
-            <button className="text-white flex items-center gap-2 group">
-              
-              
-            </button>
           </div>
         </div>
       </div>
     </section>;
 };
+
 export default HeroSection;
