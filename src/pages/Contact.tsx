@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
 import { toast } from 'sonner';
@@ -77,7 +76,7 @@ const Contact = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{ 
-            backgroundImage: 'url("https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80")', 
+            backgroundImage: 'url("/lovable-uploads/cd434f2b-670a-41ea-aca2-d3c2b139c709.png")', 
           }}
         ></div>
         
