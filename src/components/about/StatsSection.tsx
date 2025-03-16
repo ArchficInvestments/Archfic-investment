@@ -9,8 +9,8 @@ interface Stat {
 const StatsSection = () => {
   const stats: Stat[] = [
     { value: "7+", label: "Years of Experience" },
-    { value: "250+", label: "Projects Completed" },
-    { value: "50+", label: "Professional Staff" },
+    { value: "50+", label: "Projects Completed" },
+    { value: "10+", label: "Professional Staff" },
     { value: "99%", label: "Client Satisfaction" }
   ];
 
