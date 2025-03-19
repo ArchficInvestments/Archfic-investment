@@ -34,6 +34,54 @@ const Contact = () => {
     }
   ];
 
+  // Contact page specific structured data
+  const contactStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "ArchFic Investment Ltd",
+      "url": "https://archfic.com",
+      "logo": "https://archfic.com/lovable-uploads/ac830e73-d4d5-47f3-98e7-6418329b7677.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+256 702 318 582",
+        "contactType": "customer service",
+        "email": "archficinvestments@gmail.com",
+        "contactOption": "TollFree",
+        "areaServed": "Uganda",
+        "availableLanguage": "English"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pension House Building",
+        "addressLocality": "Luweero",
+        "addressRegion": "Central Region",
+        "addressCountry": "Uganda"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ]
+    }
+  };
+
   return (
     <main className="pt-20">
       <SEO 
@@ -41,6 +89,7 @@ const Contact = () => {
         description="Get in touch with ArchFic Investment Ltd. Contact our team for consultations, quotes, and inquiries about our architecture and construction services in Luweero, Uganda."
         keywords="contact ArchFic, construction consultation, architecture quote, Luweero builders, Uganda construction company contact"
         url="/contact"
+        structuredData={contactStructuredData}
       />
       
       {/* Hero */}

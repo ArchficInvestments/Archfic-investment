@@ -8,6 +8,7 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
+  structuredData?: Record<string, any>;
 }
 
 const SEO = ({ 
@@ -16,11 +17,42 @@ const SEO = ({
   keywords = 'architecture, construction, Uganda, Luweero, building design, residential construction, commercial construction, renovation',
   image = '/lovable-uploads/e87808b9-e259-4e42-975b-789165a8fccb.png',
   url = '',
-  type = 'website'
+  type = 'website',
+  structuredData
 }: SEOProps) => {
   const baseUrl = 'https://archfic.com';
   const siteTitle = title ? `ArchFic Investment Ltd | ${title}` : 'ArchFic Investment Ltd';
   const fullUrl = `${baseUrl}${url}`;
+  
+  // Default Organization structured data
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ArchFic Investment Ltd",
+    "url": baseUrl,
+    "logo": `${baseUrl}/lovable-uploads/ac830e73-d4d5-47f3-98e7-6418329b7677.png`,
+    "description": description,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Luweero",
+      "addressRegion": "Central Region",
+      "addressCountry": "Uganda"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+256 702 318 582",
+      "contactType": "customer service",
+      "email": "archficinvestments@gmail.com"
+    },
+    "sameAs": [
+      "https://facebook.com/archficinvestments",
+      "https://twitter.com/archfic",
+      "https://instagram.com/archficinvestments"
+    ]
+  };
+  
+  // Merge with any page-specific structured data
+  const finalStructuredData = structuredData || defaultStructuredData;
   
   return (
     <Helmet>
@@ -44,6 +76,11 @@ const SEO = ({
       
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
+      
+      {/* Structured Data / Schema.org */}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
     </Helmet>
   );
 };

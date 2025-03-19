@@ -14,13 +14,29 @@ const Gallery = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Gallery page specific structured data
+  const galleryStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "ArchFic Investment Ltd Project Gallery",
+    "description": "Browse our portfolio of completed architecture and construction projects across Uganda, showcasing our expertise in residential, commercial, and interior design.",
+    "url": "https://archfic.com/gallery",
+    "image": galleryItems.slice(0, 5).map(item => item.imageUrl),
+    "about": {
+      "@type": "Thing",
+      "name": "Architecture and Construction Projects",
+      "description": "Visual showcase of our residential and commercial construction projects completed in Uganda."
+    }
+  };
+
   return (
     <main>
       <SEO 
-        title="Gallery" 
-        description="Explore our project gallery"
-        keywords="architecture gallery, construction photos, building projects"
+        title="Project Gallery" 
+        description="Browse our portfolio of completed architecture and construction projects across Uganda, showcasing our expertise in residential, commercial, and interior design."
+        keywords="architecture gallery, construction photos, building projects, Uganda construction portfolio, Luweero building works"
         url="/gallery"
+        structuredData={galleryStructuredData}
       />
       
       <GalleryHero />

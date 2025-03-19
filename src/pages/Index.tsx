@@ -78,13 +78,47 @@ const Index = () => {
     }
   ];
 
+  // Homepage specific structured data
+  const homeStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ArchFic Investment Ltd",
+    "url": "https://archfic.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://archfic.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "ArchFic Investment Ltd",
+      "description": "A leading architecture and construction company in Luweero, Uganda, delivering innovative designs and quality construction for residential and commercial clients.",
+      "url": "https://archfic.com",
+      "logo": "https://archfic.com/lovable-uploads/ac830e73-d4d5-47f3-98e7-6418329b7677.png",
+      "sameAs": [
+        "https://facebook.com/archficinvestments",
+        "https://twitter.com/archfic",
+        "https://instagram.com/archficinvestments"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+256 702 318 582",
+        "contactType": "customer service",
+        "email": "archficinvestments@gmail.com",
+        "areaServed": "Uganda",
+        "availableLanguage": "English"
+      }
+    }
+  };
+
   return (
     <main>
       <SEO 
-        title="ArchFic Investment Ltd - Architecture & Construction Services in Luweero, Uganda" 
+        title="Architecture & Construction Services in Luweero, Uganda" 
         description="ArchFic Investment Ltd is a leading architecture and construction company in Luweero, Uganda offering residential and commercial construction, renovations, and architectural design services." 
         keywords="architecture, construction, Uganda, Luweero, building design, residential construction, commercial construction, renovation" 
         url="/" 
+        structuredData={homeStructuredData}
       />
       
       {/* Hero Section - Home */}
