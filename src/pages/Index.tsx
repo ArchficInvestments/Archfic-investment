@@ -83,22 +83,22 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "ArchFic Investment Ltd",
-    "url": "https://archfic.com",
+    "url": "https://archficinvestmentsltd.com",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://archfic.com/search?q={search_term_string}",
+      "target": "https://archficinvestmentsltd.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
     "mainEntity": {
       "@type": "Organization",
       "name": "ArchFic Investment Ltd",
       "description": "A leading architecture and construction company in Luweero, Uganda, delivering innovative designs and quality construction for residential and commercial clients.",
-      "url": "https://archfic.com",
-      "logo": "https://archfic.com/lovable-uploads/ac830e73-d4d5-47f3-98e7-6418329b7677.png",
+      "url": "https://archficinvestmentsltd.com",
+      "logo": "https://archficinvestmentsltd.com/lovable-uploads/ac830e73-d4d5-47f3-98e7-6418329b7677.png",
       "sameAs": [
         "https://facebook.com/archficinvestments",
-        "https://twitter.com/archfic",
-        "https://instagram.com/archficinvestments"
+        "https://x.com/archfic?t=j7vaMOswgQQaktAjwcW0Vg&s=09",
+        "https://www.instagram.com/archficivestments?igsh=MW82Z3JpZXF2amcyNA=="
       ],
       "contactPoint": {
         "@type": "ContactPoint",

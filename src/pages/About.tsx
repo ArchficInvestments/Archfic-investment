@@ -33,7 +33,7 @@ const About = () => {
       "slogan": "Building Dreams, Creating Futures",
       "areaServed": "Uganda",
       "award": "Best Construction Company in Luweero, 2022",
-      "url": "https://archfic.com/about"
+      "url": "https://archficinvestmentsltd.com/about"
     }
   };
 

@@ -55,9 +55,9 @@ const Services = () => {
       "provider": {
         "@type": "Organization",
         "name": "ArchFic Investment Ltd",
-        "url": "https://archfic.com"
+        "url": "https://archficinvestmentsltd.com"
       },
-      "url": `https://archfic.com/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`
+      "url": `https://archficinvestmentsltd.com/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`
     }))
   };
 

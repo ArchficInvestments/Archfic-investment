@@ -20,7 +20,7 @@ const Gallery = () => {
     "@type": "ImageGallery",
     "name": "ArchFic Investment Ltd Project Gallery",
     "description": "Browse our portfolio of completed architecture and construction projects across Uganda, showcasing our expertise in residential, commercial, and interior design.",
-    "url": "https://archfic.com/gallery",
+    "url": "https://archficinvestmentsltd.com/gallery",
     "image": galleryItems.slice(0, 5).map(item => item.imageUrl),
     "about": {
       "@type": "Thing",

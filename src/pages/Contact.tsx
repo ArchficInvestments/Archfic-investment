@@ -41,8 +41,8 @@ const Contact = () => {
     "mainEntity": {
       "@type": "Organization",
       "name": "ArchFic Investment Ltd",
-      "url": "https://archfic.com",
-      "logo": "https://archfic.com/lovable-uploads/ac830e73-d4d5-47f3-98e7-6418329b7677.png",
+      "url": "https://archficinvestmentsltd.com",
+      "logo": "https://archficinvestmentsltd.com/lovable-uploads/ac830e73-d4d5-47f3-98e7-6418329b7677.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+256 702 318 582",
