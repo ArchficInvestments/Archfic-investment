@@ -30,7 +30,7 @@ const SEO = ({
     "@type": "Organization",
     "name": "ArchFic Investment Ltd",
     "url": baseUrl,
-    "logo": `${baseUrl}/lovable-uploads/ac830e73-d4d5-47f3-98e7-6418329b7677.png`,
+    "logo": `${baseUrl}/lovable-uploads/534d2e2a-8d85-457b-8ddc-a3e6761cc0fb.png`,
     "description": description,
     "address": {
       "@type": "PostalAddress",
@@ -76,6 +76,10 @@ const SEO = ({
       
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
+      
+      {/* Favicon */}
+      <link rel="icon" href="/lovable-uploads/534d2e2a-8d85-457b-8ddc-a3e6761cc0fb.png" type="image/png" />
+      <link rel="apple-touch-icon" href="/lovable-uploads/534d2e2a-8d85-457b-8ddc-a3e6761cc0fb.png" />
       
       {/* Structured Data / Schema.org */}
       <script type="application/ld+json">
