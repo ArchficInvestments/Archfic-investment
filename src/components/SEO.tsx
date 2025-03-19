@@ -20,7 +20,7 @@ const SEO = ({
   type = 'website',
   structuredData
 }: SEOProps) => {
-  const baseUrl = 'https://archfic.com';
+  const baseUrl = 'https://archficinvestmentsltd.com';
   const siteTitle = title ? `ArchFic Investment Ltd | ${title}` : 'ArchFic Investment Ltd';
   const fullUrl = `${baseUrl}${url}`;
   
