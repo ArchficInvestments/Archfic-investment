@@ -49,7 +49,7 @@ const Gallery = () => {
       <SEO 
         title="Project Gallery - Residential & Commercial Construction Portfolio" 
         description="Browse our portfolio of completed architecture and construction projects across Uganda, showcasing our expertise in residential, commercial, and interior design with high-quality craftsmanship."
-        keywords="architecture gallery, construction photos, building projects, Uganda construction portfolio, Luweero building works, residential projects, commercial buildings, interior design Uganda"
+        keywords="architecture gallery, construction photos, building projects, Uganda construction portfolio, Luweero building works, residential projects, commercial buildings, interior design Uganda, Archfic Investments Ltd, Archfic Investment Ltd"
         url="/gallery"
         structuredData={galleryStructuredData}
       />

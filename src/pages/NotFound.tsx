@@ -25,7 +25,7 @@ const NotFound = () => {
       <SEO 
         title="Page Not Found" 
         description="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
-        keywords="404, page not found, error page"
+        keywords="404, page not found, error page, Archfic Investments Ltd, Archfic Investment Ltd"
         url={location.pathname}
       />
       <div className="text-center max-w-lg animate-fade-up">

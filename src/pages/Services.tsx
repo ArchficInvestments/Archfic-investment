@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import SEO from '@/components/SEO';
 import ServicesHero from '@/components/services/ServicesHero';
@@ -66,7 +67,7 @@ const Services = () => {
       <SEO 
         title="Our Services" 
         description="Discover ArchFic Investment Ltd's comprehensive architecture and construction services including residential construction, commercial building, renovations, and architectural design."
-        keywords="architecture services Uganda, construction services Luweero, building design, home construction, commercial construction, renovations"
+        keywords="architecture services Uganda, construction services Luweero, building design, home construction, commercial construction, renovations, Archfic Investments Ltd, Archfic Investment Ltd"
         url="/services"
         structuredData={servicesStructuredData}
       />

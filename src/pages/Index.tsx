@@ -116,7 +116,7 @@ const Index = () => {
       <SEO 
         title="Architecture & Construction Services in Luweero, Uganda" 
         description="ArchFic Investment Ltd is a leading architecture and construction company in Luweero, Uganda offering residential and commercial construction, renovations, and architectural design services." 
-        keywords="architecture, construction, Uganda, Luweero, building design, residential construction, commercial construction, renovation" 
+        keywords="architecture, construction, Uganda, Luweero, building design, residential construction, commercial construction, renovation, Archfic Investments Ltd, Archfic Investment Ltd" 
         url="/" 
         structuredData={homeStructuredData}
       />

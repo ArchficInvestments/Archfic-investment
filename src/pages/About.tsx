@@ -42,7 +42,7 @@ const About = () => {
       <SEO 
         title="About Us" 
         description="Learn about ArchFic Investment Ltd, a leading architecture and construction company in Luweero, Uganda with over 7 years of experience building dreams since 2017."
-        keywords="architecture company Uganda, construction experts, Luweero construction, building team, quality construction company"
+        keywords="architecture company Uganda, construction experts, Luweero construction, building team, quality construction company, Archfic Investments Ltd, Archfic Investment Ltd"
         url="/about"
         structuredData={aboutStructuredData}
       />
